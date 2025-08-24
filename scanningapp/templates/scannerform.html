@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SQL Injection Scanner</title>
+    {% load static %}
+    <style>
+        @font-face {
+            font-family: "Gilroy";
+            src: url("{% static 'Font/Gilroy-Regular.ttf' %}") format('truetype');
+        }  
+        @font-face {
+            font-family: "head";
+            src: url("{% static 'Font/Apestron Trial Version.ttf' %}") format('truetype');
+        } 
+        body {
+            font-family: Arial, sans-serif;
+            background: url("{% static 'images/sql.jpg' %}") center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            color: #266CA9; 
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            margin-top: 30px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5); 
+            backdrop-filter: blur(12px);
+            border-radius: 15px;
+            box-shadow: 0px 0px 25px rgba(0,0,0,0.7);
+            line-height: 3vw;
+            font-family: "Gilroy";
+            font-weight: 100;
+        }
+        .container h2 {
+            text-align: center;
+            color: #ffffff;
+            margin-bottom: 60px;
+            font-size: 3rem;
+            font-family: "head";
+            word-spacing: 0.5vw;
+            letter-spacing: 0.2vw;
+        }
+        form {
+            margin: 20px 0;
+        }
+        label, p {
+            color: #ffffff;
+            font-weight: bold;
+        }
+        input, select {
+            background: rgba(0,0,0,0.6);
+            color: #ffffff;
+            border: 1px solid #ffffff;
+            padding: 6px;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px 15px;
+            border: none;
+            background: #ffffff;
+            color: #000;
+            font-weight: bold;
+            font-family: "head";
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        button:hover {
+            background: #000000;
+            color: #fff;
+            box-shadow: 1px 5px 15px rgba(255, 255, 255, 0.201);
+            transform: translateY(-3px) translateX(1px);
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+            color: #ffffff;
+        }
+        th, td {
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            padding: 8px;
+            text-align: left;
+            background: rgba(0,0,0,0.4);
+        }
+        th {
+            background: rgba(0,0,0,0.7);
+            color: #ffffff;
+        }
+        tr:nth-child(even) {background-color: rgba(0,0,0,0.3);}
+        .vuln {
+            color: #ff4444;
+            font-weight: bold;
+        }
+        .safe {
+            color: #44ff88;
+            font-weight: bold;
+        }
+        h3 {
+            text-align: center;
+            margin: 20px 0;
+            color: #ffffff;
+        }
+        input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            accent-color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>SQL Injection Scanner</h2>
+
+        <form action="" method="post">
+            {% csrf_token %} 
+            {{form.as_p}}
+            <button class="btn">Scan</button>
+        </form>
+
+        {% if results %}
+            <h3>Scan Results</h3>
+            <table>
+                <tr>
+                    <th>Page</th>
+                    <th>Action</th>
+                    <th>Method</th>
+                    <th>Payload</th>
+                    <th>Status</th>
+                </tr>
+                {% for r in results %}
+                <tr>
+                    <td>{{ r.page }}</td>
+                    <td>{{ r.action }}</td>
+                    <td>{{ r.method }}</td>
+                    <td>{{ r.payload }}</td>
+                    <td>
+                        {% if r.vulnerable %}
+                            <span class="vuln">Vulnerable</span>
+                        {% else %}
+                            <span class="safe">Safe</span>
+                        {% endif %}
+                    </td>
+                </tr>
+                {% endfor %}
+            </table>
+        {% endif %}
+    </div>
+    <script>
+        let form = document.querySelector("form");
+        let scan = document.querySelector(".btn");
+        form.addEventListener("submit", function() {
+            if (form.checkValidity()) {
+                scan.textContent = "Scanning..."; 
+                scan.disabled = true;
+                scan.style.cursor = "not-allowed"
+                let results = document.querySelector(".container h3");
+                let table = document.querySelector(".container table");
+
+                if (results) results.remove();
+                if (table) table.remove();
+            }
+        });
+    </script>
+</body>
+</html>
