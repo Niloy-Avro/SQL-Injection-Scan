@@ -22,9 +22,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-$(j2fwrp@wx-0*7nrii%xtw16ly1ix6t)w6agkescywq#q*650'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['sql-injection-scan-2.onrender.com']
+ALLOWED_HOSTS = ["sql-injection-scan-2.onrender.com"]
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://sql-injection-scan-2.onrender.com",
+]
+
 ALLOWED_SCAN_DOMAINS=[
     "fontawesome.com",
     "testphp.vulnweb.com",
@@ -133,8 +138,3 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-CSRF_TRUSTED_ORIGINS = [
-    "https://sql-injection-scan-2.onrender.com",
-    "http://sql-injection-scan-2.onrender.com",
-]
