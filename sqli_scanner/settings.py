@@ -24,7 +24,7 @@ SECRET_KEY = 'django-insecure-$(j2fwrp@wx-0*7nrii%xtw16ly1ix6t)w6agkescywq#q*650
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["sql-injection-scan-2.onrender.com"]
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'sql-injection-scan-2.onrender.com']
 
 CSRF_TRUSTED_ORIGINS = [
     "https://sql-injection-scan-2.onrender.com",
