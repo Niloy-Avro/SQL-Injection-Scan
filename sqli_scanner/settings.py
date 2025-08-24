@@ -24,7 +24,7 @@ SECRET_KEY = 'django-insecure-$(j2fwrp@wx-0*7nrii%xtw16ly1ix6t)w6agkescywq#q*650
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 ALLOWED_SCAN_DOMAINS=[
     "fontawesome.com",
     "testphp.vulnweb.com",
