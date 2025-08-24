@@ -135,4 +135,4 @@ def scaningform(request):
                
     else:
         myform = UserForm()                            
-    return render(request,"scannerform.html",{"form":myform,"results": results})
+    return render(request,"index.html",{"form":myform,"results": results})
