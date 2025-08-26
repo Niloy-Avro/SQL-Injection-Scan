@@ -57,13 +57,11 @@
 
 > ### **3. Run the Scanner**
 > ```bash
-> python scan.py -u <target_url>
+> python manage.py runserver.
 > ```
-
-Example:
-```bash
-python scan.py -u "http://testphp.vulnweb.com/listproducts.php?cat=1"
-```
+> ```bash
+> By default, this starts the server on 127.0.0.1:8000.
+> ```
 
 ---
 
