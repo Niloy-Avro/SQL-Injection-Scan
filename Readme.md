@@ -56,17 +56,20 @@
 Example:
 ```bash
 python scan.py -u "http://testphp.vulnweb.com/listproducts.php?cat=1"
-```bash
+>```
 
-🛠️ Tech Stack
+---
 
-Python 3.x
+## 🛠️ Tech Stack
+- Python 3.x
+- Custom Payloads
+- VS Code (recommended IDE)
 
-Requests / HTTP handling
+---
+## 👨‍💻 Author
 
-Custom Payloads
-
-
+- Niloy Avro Mondal  
+- GitHub: [@Niloy-Avro](https://github.com/Niloy-Avro)
 
 ---
 
@@ -84,7 +87,6 @@ Use this tool only on systems you own or have explicit permission to test.
 Niloy Avro Mondal
 
 GitHub: @Niloy-Avro
-
 
 
 ---
