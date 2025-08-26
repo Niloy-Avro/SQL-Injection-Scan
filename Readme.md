@@ -44,7 +44,14 @@
 > ```
 
 > ### **2. Add The Target Website (Use legally permissible website)**
-> ```bash
+> ```basALLOWED_SCAN_DOMAINS=[
+    "fontawesome.com",
+    "testphp.vulnweb.com",
+    "owasp.org",
+    "testphp.vulnweb.com",
+    "dvwa.co.uk",
+    "itsecgames.com"
+]
 > ```
 
 > ### **3. Run the Scanner**
