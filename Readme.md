@@ -86,4 +86,3 @@ Use this tool only on systems you own or have explicit permission to test.
 <p align="center">
   ⭐ If you found this useful, don’t forget to star the repo!
 </p>
-```
