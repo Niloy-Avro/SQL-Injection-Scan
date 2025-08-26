@@ -81,16 +81,6 @@ This project is for educational and research purposes only.
 The author is not responsible for any misuse or illegal activity.
 Use this tool only on systems you own or have explicit permission to test.
 
-
----
-
-👨‍💻 Author
-
-Niloy Avro Mondal
-
-GitHub: @Niloy-Avro
-
-
 ---
 
 <p align="center">
