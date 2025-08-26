@@ -56,3 +56,40 @@
 Example:
 ```bash
 python scan.py -u "http://testphp.vulnweb.com/listproducts.php?cat=1"
+---
+
+🛠️ Tech Stack
+
+Python 3.x
+
+Requests / HTTP handling
+
+Custom Payloads
+
+
+
+---
+
+⚠️ Disclaimer
+
+This project is for educational and research purposes only.
+The author is not responsible for any misuse or illegal activity.
+Use this tool only on systems you own or have explicit permission to test.
+
+
+---
+
+👨‍💻 Author
+
+Niloy Avro Mondal
+
+GitHub: @Niloy-Avro
+
+
+
+---
+
+<p align="center">
+  ⭐ If you found this useful, don’t forget to star the repo!
+</p>
+```
