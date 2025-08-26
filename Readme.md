@@ -56,7 +56,7 @@
 Example:
 ```bash
 python scan.py -u "http://testphp.vulnweb.com/listproducts.php?cat=1"
->```
+```
 
 ---
 
