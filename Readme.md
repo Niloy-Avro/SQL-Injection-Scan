@@ -63,7 +63,7 @@
 ---
 
 ## 🛠️ Tech Stack
-- Python 3.x
+- Python 3.13.7
 - Custom Payloads
 - VS Code (recommended IDE)
 
