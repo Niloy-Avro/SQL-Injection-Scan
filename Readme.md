@@ -43,9 +43,8 @@
 > cd SQL-Injection-Scan
 > ```
 
-> ### **2. Install Dependencies**
+> ### **2. Add The Target Website (Use legally permissible website)**
 > ```bash
-> pip install -r requirements.txt
 > ```
 
 > ### **3. Run the Scanner**
