@@ -28,10 +28,10 @@
 
 - 🔎 **Detects SQL Injection points** in URLs  
 - ⚡ **Fast & Lightweight** — no bulky dependencies  
-- 🐍 Written in **Python** for simplicity & extensibility  
-- 📜 Uses **multiple payloads** for deeper scanning  
-- 📂 Generates clear reports of possible vulnerabilities  
-- 🛡️ Created for **ethical use and security learning**
+- 🐍 Written in **Python** for simplicity and extensibility  
+- 📜 Uses **basic SQL injection payloads** for scanning  
+- 📂 Generates simple reports of potential vulnerabilities  
+- 🛡️ Designed as a **basic project for ethical use and security learning**  
 
 ---
 
@@ -43,25 +43,22 @@
 > cd SQL-Injection-Scan
 > ```
 
-> ### **2. Add The Target Website (Use legally permissible website)**
-> ```bash
->ALLOWED_SCAN_DOMAINS=[
->    "fontawesome.com",
->    "testphp.vulnweb.com",
->    "owasp.org",
->    "testphp.vulnweb.com",
->    "dvwa.co.uk",
->    "itsecgames.com"
->]
+> ### **2. Add the Target Website (use only legally permitted domains)**
+> ```python
+> ALLOWED_SCAN_DOMAINS = [
+>     "fontawesome.com",
+>     "testphp.vulnweb.com",
+>     "owasp.org",
+>     "dvwa.co.uk",
+>     "itsecgames.com"
+> ]
 > ```
 
 > ### **3. Run the Scanner**
 > ```bash
-> python manage.py runserver.
+> python manage.py runserver
 > ```
-> ```bash
-> By default, this starts the server on 127.0.0.1:8000.
-> ```
+> By default, the server starts at **http://127.0.0.1:8000**
 
 ---
 
