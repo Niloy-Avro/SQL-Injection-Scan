@@ -1,38 +1,58 @@
-# 🔍 SQL Injection Scan
+<h1 align="center">🔍 SQL Injection Scan</h1>
 
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-![GitHub stars](https://img.shields.io/github/stars/Niloy-Avro/SQL-Injection-Scan?style=social)
-![GitHub forks](https://img.shields.io/github/forks/Niloy-Avro/SQL-Injection-Scan?style=social)
-![GitHub last commit](https://img.shields.io/github/last-commit/Niloy-Avro/SQL-Injection-Scan)
+<p align="center">
+  <img src="https://img.shields.io/github/languages/top/Niloy-Avro/SQL-Injection-Scan?color=orange&style=for-the-badge" alt="Top Language"/>
+  <img src="https://img.shields.io/github/last-commit/Niloy-Avro/SQL-Injection-Scan?style=for-the-badge&color=brightgreen&label=Last%20Commit" />
+  <img src="https://img.shields.io/badge/Security-SQL%20Injection-red?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Tool-Python-3776AB?style=for-the-badge" />
+  <br><img src="https://img.shields.io/github/repo-size/Niloy-Avro/SQL-Injection-Scan?color=purple&style=for-the-badge"/>
+  <img src="https://img.shields.io/github/languages/code-size/Niloy-Avro/SQL-Injection-Scan?style=for-the-badge" alt="Code Size">
+</p>
 
 ---
 
-🚀 **SQL Injection Scan** is a simple yet powerful tool to detect **SQL Injection vulnerabilities** in web applications.  
-It automates the process of scanning parameters, testing payloads, and reporting potential risks — saving time for developers, security researchers, and ethical hackers.
+<p align="center">
+  <b>A lightweight and efficient tool to detect SQL Injection vulnerabilities</b><br>
+  — built for ethical hacking, learning, and penetration testing.
+</p>
+
+---
+
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=24&pause=1000&color=ff0000&center=true&vCenter=true&width=700&lines=Python+%7C+Cybersecurity+%7C+Pentesting;SQL+Injection+Scanner;Find+Vulnerable+Parameters+%26+URLs" />
+</p>
 
 ---
 
 ## ✨ Features
 
-- 🔎 Detects potential **SQL Injection points** automatically  
-- 📜 Supports multiple payloads for deeper testing  
-- ⚡ Lightweight and fast execution  
-- 📂 Clean report of vulnerable endpoints  
-- 🛡️ Built for **ethical hacking and learning purposes only**
+- 🔎 **Detects SQL Injection points** in URLs  
+- ⚡ **Fast & Lightweight** — no bulky dependencies  
+- 🐍 Written in **Python** for simplicity & extensibility  
+- 📜 Uses **multiple payloads** for deeper scanning  
+- 📂 Generates clear reports of possible vulnerabilities  
+- 🛡️ Created for **ethical use and security learning**
 
 ---
 
-## 📸 Screenshot / Demo
+## 🚀 Getting Started
 
-> *(Add a screenshot/gif of your tool in action here — for better visual appeal)*  
+> ### **1. Clone the Repository**
+> ```bash
+> git clone https://github.com/Niloy-Avro/SQL-Injection-Scan.git
+> cd SQL-Injection-Scan
+> ```
 
----
+> ### **2. Install Dependencies**
+> ```bash
+> pip install -r requirements.txt
+> ```
 
-## ⚙️ Installation
+> ### **3. Run the Scanner**
+> ```bash
+> python scan.py -u <target_url>
+> ```
 
-Clone the repository and install required dependencies:
-
+Example:
 ```bash
-git clone https://github.com/Niloy-Avro/SQL-Injection-Scan.git
-cd SQL-Injection-Scan
-pip install -r requirements.txt
+python scan.py -u "http://testphp.vulnweb.com/listproducts.php?cat=1"
